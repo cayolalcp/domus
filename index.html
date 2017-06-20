@@ -1,0 +1,267 @@
+<html>
+
+<head>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.lime-indigo.min.css" />
+	<script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!--<link rel="stylesheet" type="text/css" href="styles.css">-->
+</head>
+
+
+<style>
+	.container {
+		position: relative;
+		top: 6%;
+	}
+
+	.center {}
+
+	.imgBack {
+		position: absolute;
+		height: 630;
+		opacity: 0.5;
+		width: 100%;
+		min-width: 1400px;
+	}
+
+	.formPost {
+		min-width: 450px;
+		text-align: center;
+		font-size: 18px;
+		background-color: white;
+		border-style: solid;
+		border-color: black;
+		border-width: 2px;
+	}
+
+
+	.homeChefAsk {
+		text-align: center;
+		font-size: 18px;
+		min-width: 300px;
+	}
+
+	.mainContent {
+
+		/*	position: relative;*/
+		position: fixed;
+		top: 25%;
+
+		width: 40%;
+		margin-left: auto;
+		margin-right: auto;
+		display: block;
+		margin-left: 30%;
+	}
+
+	#logo {
+
+
+		margin-left: auto;
+		margin-right: auto;
+		margin-bottom: 3%;
+		display: block;
+	}
+
+	.searchButton {
+		margin-left: 30px;
+		background-color: #CDDC39;
+	}
+
+	.searchButton:hover {
+		background-color: #F0F4C3;
+	}
+
+	.menuheader {
+
+		position: relative;
+		float: right;
+		top: 20px;
+	}
+
+	.headerButton {
+		background-color: transparent;
+		font-size: 20px;
+	}
+
+
+	a:link,
+	a:visited {
+		background-color: #f44336;
+		color: white;
+		padding: 5px 7px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		border-radius: 10px;
+		font-size: 16;
+	}
+
+	a:hover,
+	a:active {
+		background-color: red;
+	}
+
+
+	.modal {
+		display: none;
+		/* Hidden by default */
+		position: fixed;
+		/* Stay in place */
+		z-index: 1;
+		/* Sit on top */
+		padding-top: 250px;
+		/* Location of the box */
+		width: 100%;
+		height: 100%;
+		left: 0;
+		top: 0;
+		overflow: auto;
+		/* Enable scroll if needed */
+		background-color: rgb(0, 0, 0);
+		/* Fallback color */
+		background-color: rgba(0, 0, 0, 0.4);
+		/* Black w/ opacity */
+	}
+	/* Modal Content */
+
+	.modal-content {
+		background-color: #fefefe;
+		margin: auto;
+		padding: 20px;
+		border: 1px solid #888;
+		width: 80%;
+	}
+	/* The Close Button */
+
+	.close {
+		color: #aaaaaa;
+		float: right;
+		font-size: 28px;
+		font-weight: bold;
+	}
+
+	.close:hover,
+	.close:focus {
+		color: #000;
+		text-decoration: none;
+		cursor: pointer;
+	}
+
+	#nameField {
+		display: block;
+		position: relative;
+		left: 40%;
+	}
+
+	#passField {
+		display: block;
+		position: relative;
+		left: 40%;
+	}
+
+	#buttonLogIn {
+		position: relative;
+		left: 45%;
+	}
+</style>
+</head>
+
+<body>
+	<div class="menuheader">
+		<!-- Flat button with ripple -->
+		<button id="loginButton" class="headerButton mdl-button mdl-js-button mdl-js-ripple-effect">
+  Log In
+</button>
+
+		<button class="headerButton mdl-button mdl-js-button mdl-js-ripple-effect">
+Register</button>
+
+	</div>
+
+	<div class="container">
+		<img class="imgBack" src="images/salad2.png" alt="HealthySalad" width="1000" height="300">
+
+		<div class="mainContent">
+			<img id="logo" src="images/logo2.png" alt="Domus">
+
+
+			<div class="formPost">
+				<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+					<input class="mdl-textfield__input" type="text" id="sample3">
+					<label class="mdl-textfield__label" for="sample3">Introduce your Postcode...</label>
+				</div>
+				<button class="searchButton mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="window.location.href='app.html'">
+	 	 Search
+		</button>
+			</div>
+
+			<h5 class="homeChefAsk">Are you a Home Chef? <a href="upload_meal.html"> Click here</a></h5>
+
+
+		</div>
+	</div>
+
+	<!-- The Modal -->
+	<div id="myModal" class="modal">
+
+		<!-- Modal content -->
+		<div class="modal-content">
+			<span class="close">&times;</span>
+
+
+			<form action="loggedIndex.html">
+				<h4>Please introduce the following information:</h4>
+				<div id="nameField" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+					<input class="mdl-textfield__input" type="text">
+					<label class="mdl-textfield__label" for="sample3">Username</label>
+				</div>
+
+				<div id="passField" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+					<input class="mdl-textfield__input" type="password">
+					<label class="mdl-textfield__label" for="sample3">Password</label>
+				</div>
+
+				<button id="buttonLogIn" class="searchButton mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" type=submit>Log In</button>
+			</form>
+
+
+		</div>
+
+	</div>
+
+	<script>
+		// Get the modal
+		var modal = document.getElementById('myModal');
+
+		// Get the button that opens the modal
+		var btn = document.getElementById("loginButton");
+
+		// Get the <span> element that closes the modal
+		var span = document.getElementsByClassName("close")[0];
+
+		// When the user clicks the button, open the modal 
+		btn.onclick = function () {
+			modal.style.display = "block";
+		}
+
+		// When the user clicks on <span> (x), close the modal
+		span.onclick = function () {
+			modal.style.display = "none";
+		}
+
+		// When the user clicks anywhere outside of the modal, close it
+		window.onclick = function (event) {
+			if (event.target == modal) {
+				modal.style.display = "none";
+			}
+		}
+	</script>
+
+
+
+</body>
+
+</html>
